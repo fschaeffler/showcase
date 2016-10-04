@@ -16,6 +16,7 @@
 
 body {
 	padding-top: 2%;
+	background-color: light-grey;
 }
 
 .rTable { display: table }
@@ -29,18 +30,16 @@ body {
 .rTableRowLabel { font-weight: bold; }
 
 .serverNodeBlock {
-	border: 1px;
-	border-color: black;
-	border-style: dashed;
 	border-radius: 15px;
 	margin-bottom: 10px;
+	box-shadow: 0 0 50px gray;
 }
 
 .serverNodeBlockDelete { text-align: right; }
 
-.backgroundColor0 { background-color: #9af779; }
-.backgroundColor1 { background-color: #79a9f7; }
-.backgroundColor2 { background-color: #f7c979; }
+.backgroundColor0 { background-color: #dbe9d8; }
+.backgroundColor1 { background-color: #c2d4d8; }
+.backgroundColor2 { background-color: #f2efe8; }
 
 .imageOsType { margin: 5px; }
 
@@ -61,7 +60,7 @@ body {
 }
 
 .container {
-	border: 1px solid black;
+	border: 1px solid white;
 	box-shadow: 0 0 100px silver;
 	background-color: silver;
 	min-height: 800px;
