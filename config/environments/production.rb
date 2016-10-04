@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # assets host for origin pull cdn
+  # config.action_controller.asset_host = 'verbund-iq-showcase.cloudfront.net'
 end

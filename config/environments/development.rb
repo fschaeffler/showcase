@@ -38,4 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # assets host for origin pull cdn
+  # config.action_controller.asset_host = 'verbund-iq-showcase.cloudfront.net'
 end

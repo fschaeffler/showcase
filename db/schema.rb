@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003175224) do
+ActiveRecord::Schema.define(version: 20161004112548) do
 
   create_table "server_infos", force: :cascade do |t|
     t.string   "remote_ip",  limit: 15, null: false
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20161003175224) do
     t.string   "local_dns"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.string   "os_type"
   end
 
   add_index "server_infos", ["remote_ip"], name: "index_server_infos_on_remote_ip", unique: true
