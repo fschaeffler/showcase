@@ -1,0 +1,51 @@
+<h1>Nodes Overview</h1>
+
+<h2>Local Node</h2>
+<div class="serverNodeBlock <%= get_color_class @server_info %>">
+	<div class="rTable">
+		<div class="rTableRow">
+			<div class="rTableCell rTableRowLabel">Node</div>
+			<div class="rTableCell"><%= @server_info.id %></div>
+		</div>
+		<div class="rTableRow">
+			<div class="rTableCell rTableRowLabel">Remote IP-Address</div>
+			<div class="rTableCell"><%= @server_info.remote_ip %></div>
+		</div>
+		<div class="rTableRow">
+			<div class="rTableCell rTableRowLabel">Remote DNS-Address</div>
+			<div class="rTableCell"><%= @server_info.remote_dns %></div>
+		</div>
+		<div class="rTableRow">
+			<div class="rTableCell rTableRowLabel">Local IP-Address</div>
+			<div class="rTableCell"><%= @server_info.local_ip %></div>
+		</div>
+		<div class="rTableRow">
+			<div class="rTableCell rTableRowLabel">Local DNS-Address</div>
+			<div class="rTableCell"><%= @server_info.local_dns %></div>
+		</div>
+	</div>
+</div>
+
+<h2>Other Node(s)</h2>
+<% if @other_server_infos.count > 0 %>
+	<% @other_server_infos.each do |other_server_info| %>
+		<div class="serverNodeBlock <%= get_color_class other_server_info %>">
+			<div class="rTable">
+				<div class="rTableRow">
+					<div class="rTableCell rTableRowLabel">Node</div>
+					<div class="rTableCell"><%= other_server_info.id %></div>
+				</div>
+				<div class="rTableRow">
+					<div class="rTableCell rTableRowLabel">Remote IP-Address</div>
+					<div class="rTableCell"><%= other_server_info.remote_ip %></div>
+				</div>
+				<div class="rTableRow">
+					<div class="rTableCell rTableRowLabel">Remote DNS-Address</div>
+					<div class="rTableCell"><%= other_server_info.remote_dns %></div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+<% else %>
+	No other Server Nodes registered.
+<% end %>

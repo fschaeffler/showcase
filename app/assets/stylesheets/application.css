@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+.rTable { display: table }
+.rTableRow { display: table-row; }
+.rTableHeading { display: table-header-group; }
+.rTableBody { display: table-row-group; }
+.rTableFoot { display: table-footer-group; }
+.rTableCell, .rTableHead { display: table-cell; padding: 3px 10px; }
+.rTableRowLabel { font-weight: bold; }
+
+.serverNodeBlock { border: 1px; border-color: black; border-style: dashed; margin: 10px; }
+
+.serverNodeBlockDelete { text-align: right; }
+
+.backgroundColor0 { background-color: #9af779; }
+.backgroundColor1 { background-color: #79a9f7; }
+.backgroundColor2 { background-color: #f7c979; }
