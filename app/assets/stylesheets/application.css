@@ -14,6 +14,10 @@
  *= require_self
  */
 
+body {
+	padding-top: 2%;
+}
+
 .rTable { display: table }
 .rTableFull { width: 100%; }
 .rTableRow { display: table-row; }
@@ -48,10 +52,18 @@
 	width: 100%;
 	padding-left: 10px;
 	padding-right: 10px;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  cursor: hand;
+	height: 25px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	cursor: hand;
+}
+
+.container {
+	border: 1px solid black;
+	box-shadow: 0 0 100px silver;
+	background-color: silver;
+	min-height: 800px;
+	padding: 15px;
 }
