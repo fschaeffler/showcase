@@ -12,5 +12,20 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require tether
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+setTimeout(fade_out, 3000);
+
+function fade_out() {
+	$('.notice').delay(150).fadeOut(300)
+}
+
+$(function() {
+  $('.notice').click(function(event) {
+  	event.preventDefault();
+    fade_out();
+  });
+}); 

@@ -2,7 +2,13 @@
 
 <h2>Local Node</h2>
 <div class="serverNodeBlock <%= get_color_class @server_info %>">
-	<div class="imageOsType"><%= image_tag(get_os_type_image @server_info) %></div>
+	<div class="rTable rTableFull">
+		<div class="rTableRow">
+			<div class="rTableCell"><%= image_tag(get_os_type_image @server_info) %></div>
+			<div class="rTableCell rTableCellRight"><%= link_to(image_tag("email_25x25.png"), send_email_path, :method => :send_email) %></div>
+		</div>
+	</div>
+
 	<div class="rTable">
 		<div class="rTableRow">
 			<div class="rTableCell rTableRowLabel">Node</div>
@@ -31,7 +37,14 @@
 <% if @other_server_infos.count > 0 %>
 	<% @other_server_infos.each do |other_server_info| %>
 		<div class="serverNodeBlock <%= get_color_class other_server_info %>">
-		<div class="imageOsType"><%= image_tag(get_os_type_image @server_info) %></div>
+			<div class="rTable rTableFull">
+				<div class="rTableRow">
+					<div class="rTableCell"><%= image_tag(get_os_type_image other_server_info) %></div>
+					<div class="rTableCell rTableCellRight">
+					<%= link_to image_tag("delete_25x25.png"), server_info_path(other_server_info.id),  method: :delete, data: { confirm: 'Do you really want to delete server node "' + other_server_info.remote_ip + '"?' } %></div>
+				</div>
+			</div>
+			
 			<div class="rTable">
 				<div class="rTableRow">
 					<div class="rTableCell rTableRowLabel">Node</div>

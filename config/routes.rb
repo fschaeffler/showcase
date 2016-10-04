@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   get 'welcome/index'
+  post '/send_email', to: 'welcome#send_email', as: 'send_email'
+  resources :server_infos
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

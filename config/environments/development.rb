@@ -41,4 +41,9 @@ Rails.application.configure do
 
   # assets host for origin pull cdn
   # config.action_controller.asset_host = 'verbund-iq-showcase.cloudfront.net'
+
+  # emails via ses
+  config.action_mailer.delivery_method = :ses
+
+  config.action_mailer.perform_deliveries = true
 end
