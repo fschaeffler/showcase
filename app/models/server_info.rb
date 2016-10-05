@@ -8,6 +8,7 @@ class ServerInfo < ActiveRecord::Base
 
 	def self.find_myself
 		ip_remote = open('http://whatismyip.akamai.com').read
+		ip_remote = '1.1.1.1'
 
 		if ip_remote
 			server_info = ServerInfo.find_or_create_by(remote_ip: ip_remote)
