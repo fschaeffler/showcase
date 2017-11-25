@@ -23,7 +23,7 @@ sudo apt-get install libmysqlclient-dev -y
 bundle
 
 # web server
-sudo apt-get install nginx
+sudo apt-get install nginx -y
 
 cat > nginx-default <<EOL
 upstream app {
@@ -47,32 +47,14 @@ server {
 }
 EOL
 
-sudo mv nginx-default /etc/nginx/sites-available/default
+sudo cp nginx-default /etc/nginx/sites-available/default
 sudo service nginx restart
 
 # app server
-cd ~/showcase
-
-echo "Please sepecify mysql database host"
-read DB_HOST
-echo "Please sepecify mysql database username"
-read DB_USERNAME
-echo "Please sepecify mysql database password"
-read DB_PASSWORD
-
-cat > config/database.yml <<EOL
-development:
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  pool: 5
-  database: showcase
-  username: $DB_USERNAME
-  password: $DB_PASSWORD
-  host: $DB_HOST
-EOL
-
-bundle exec rails db:migrate RAILS_ENV=development
-
 export AMAZON_ACCESS_KEY=''
 export AMAZON_SECRET_KEY=''
+
+echo ""
+echo "!!! PLEASE UPDATE THE 'CHANGE_ME' entries in config/database.yml"
+echo "!!! AFTERWARDS A `bundle exec rails db:migrate RAILS_ENV=development` IS NEEDED"
+echo "!!! AFTERWARDS A `bundle exec rails server` IS NEEDED"
