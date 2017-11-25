@@ -55,6 +55,9 @@ export AMAZON_ACCESS_KEY=''
 export AMAZON_SECRET_KEY=''
 
 echo ""
-echo "!!! PLEASE UPDATE THE 'CHANGE_ME' entries in config/database.yml"
-echo "!!! AFTERWARDS A 'bin/rails db:migrate RAILS_ENV=development' IS NEEDED"
-echo "!!! AFTERWARDS A 'bin/rails server' IS NEEDED"
+echo "NEXT STEPS (COPY THOSE TO A TEXT FILE ON YOUR LAPTOP SO YOU DON'T LOSE THEM)"
+echo "  1. LOGOUT AND LOGIN AGAIN AND GO TO THE DIRECTORY 'showcase'"
+echo "  2. UPDATE THE 'CHANGE_ME' entries in config/database.yml"
+echo "  3. AFTERWARDS A 'bin/rails db:migrate RAILS_ENV=development' IS NEEDED"
+echo "  4. AFTERWARDS A 'bin/rails server' IS NEEDED"
+echo ""
