@@ -1,11 +1,7 @@
 #!/bin/bash
 
-set -e -x
-
-export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
 sudo apt-get upgrade -y
-unset DEBIAN_FRONTEND
 
 # ruby
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -25,7 +21,6 @@ nvm install 8
 cd ~; git clone https://github.com/fschaeffler/showcase; cd showcase
 sudo apt-get install libmysqlclient-dev -y
 bundle
-bundle exec rails db:migrate RAILS_ENV=development
 
 # web server
 sudo apt-get install nginx
@@ -72,10 +67,12 @@ development:
   reconnect: false
   pool: 5
   database: showcase
-  username: $DB_HOST
-  password: $DB_USERNAME
-  host: $DB_PASSWORD
+  username: $DB_USERNAME
+  password: $DB_PASSWORD
+  host: $DB_HOST
 EOL
+
+bundle exec rails db:migrate RAILS_ENV=development
 
 export AMAZON_ACCESS_KEY=''
 export AMAZON_SECRET_KEY=''
