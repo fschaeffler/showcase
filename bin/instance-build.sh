@@ -56,5 +56,5 @@ export AMAZON_SECRET_KEY=''
 
 echo ""
 echo "!!! PLEASE UPDATE THE 'CHANGE_ME' entries in config/database.yml"
-echo "!!! AFTERWARDS A 'bundle exec rails db:migrate RAILS_ENV=development' IS NEEDED"
-echo "!!! AFTERWARDS A 'bundle exec rails server' IS NEEDED"
+echo "!!! AFTERWARDS A 'bin/rails db:migrate RAILS_ENV=development' IS NEEDED"
+echo "!!! AFTERWARDS A 'bin/rails server' IS NEEDED"
