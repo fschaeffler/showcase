@@ -1,6 +1,11 @@
 #!/bin/bash
+
+set -e -x
+
+export DEBIAN_FRONTEND=noninteractive
 sudo apt-get update
 sudo apt-get upgrade -y
+unset DEBIAN_FRONTEND
 
 # ruby
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
@@ -10,15 +15,15 @@ rvm install ruby-2.4.1
 gem install bundle
 
 # nodejs
-sudo apt-get install build-essential libssl-dev libmysqlclient-dev openjdk-8-jdk
+sudo apt-get install build-essential libssl-dev openjdk-8-jdk -y
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
 export NVM_DIR="/home/ubuntu/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 nvm install 8
 
 # app
-cd ~; git clone https://github.com/fschaeffler/showcase
-sudo apt-get install libmysqlclient-dev
+cd ~; git clone https://github.com/fschaeffler/showcase; cd showcase
+sudo apt-get install libmysqlclient-dev -y
 bundle
 bundle exec rails db:migrate RAILS_ENV=development
 
