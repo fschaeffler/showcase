@@ -74,5 +74,3 @@ EOL
 
 export AMAZON_ACCESS_KEY=''
 export AMAZON_SECRET_KEY=''
-
-bundle exec rails server
