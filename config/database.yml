@@ -7,3 +7,13 @@ development:
   username: CHANGE_ME
   password: 'CHANGE_ME'
   host: CHANGE_ME
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+  database: CHANGE_ME
+  username: CHANGE_ME
+  password: 'CHANGE_ME'
+  host: CHANGE_ME
