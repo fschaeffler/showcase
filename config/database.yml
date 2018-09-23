@@ -5,5 +5,5 @@ development:
   pool: 5
   database: CHANGE_ME
   username: CHANGE_ME
-  password: CHANGE_ME
+  password: 'CHANGE_ME'
   host: CHANGE_ME

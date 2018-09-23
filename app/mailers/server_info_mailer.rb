@@ -3,6 +3,6 @@ class ServerInfoMailer < ApplicationMailer
     @server_info = options[:server_info]
     @email = options[:email]
 
-    mail(:to=>"flo@schf.de", :subject=>"Amazon SES Email")
+    mail(:to=>"flo@aws-blog.io", :subject=>"Amazon SES Email")
   end
 end

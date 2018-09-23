@@ -79,6 +79,7 @@ Rails.application.configure do
 
   # assets host for origin pull cdn
   # config.action_controller.asset_host = 'verbund-iq-showcase.cloudfront.net'
+  # config.web_console.whitelisted_ips = '0.0.0.0/0'
 
   # emails via ses
   config.action_mailer.delivery_method = :ses
