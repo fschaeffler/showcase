@@ -1,4 +1,6 @@
-ActionMailer::Base.add_delivery_method :ses, AWS::SES::Base,
+# frozen_string_literal: true
+
+ActionMailer::Base.add_delivery_method(:ses, AWS::SES::Base,
   access_key_id: ENV['AMAZON_ACCESS_KEY'],
   secret_access_key: ENV['AMAZON_SECRET_KEY'],
-  server: 'email.eu-west-1.amazonaws.com'
+  server: 'email.eu-west-1.amazonaws.com')
