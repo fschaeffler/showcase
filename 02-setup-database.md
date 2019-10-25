@@ -6,7 +6,7 @@ Dev/Test-MySQL
 DB instance class: db.t2.micro
 DB instance identifier: showcase
 Master username: showcase_admin
-Master password: <PASSWORD>
+Master password: showcase
 Database name: showcase_db
 
 # Wait for instance to be ready
